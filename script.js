@@ -50,7 +50,16 @@ function esPar(numero){
 	return texto;
 }
 esPar(5);
+//Cantidad de Digitos que tiene una variable entera positiva
 
+function cantDigitos(num){
+	contador= 0;    // contador de cifras del numero ingresado
+        while(num!=0){  //mientras a num le queden numeros
+            n = n/10;  //quita el último digito va de atras hacia delante!
+          	contador++; //cuenta la cantidad de digitos
+        }
+    return contador;
+}
 
 //Funcion a la cual le envaremos tres enteros y muestre el menor
 var menorMayor=[6,3,20];
@@ -61,3 +70,22 @@ function menor(arreglo){
 	//var max=Math.max.apply(null, numeros1);//=>busca el numero mayor de un arreglo
 }
 
+//es palindromo
+function reverse(pal){
+     return pal.split("").reverse().join("");
+}
+function checkIsPalindrome(arreglo){
+   var result=[];
+   var respuesta=true;
+   for(var i=0;i<arreglo.length;i++){
+       result.push(arr[i]==reverse(arreglo[i]));
+      if(result==arreglo){
+        respuesta=true;
+      }else{
+        respuesta=false;
+      }
+   }
+   return respuesta;
+}
+var pal=["La ruta nos aporto otro paso natural"];
+checkIsPalindrome(pal);
